@@ -1,12 +1,11 @@
 import React from "react";
+import Card from "./Card";
 
 const Results = (props) => {
   return (
-    <div>
+    <div className="sm:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 max-w-6xl mx-auto py-4">
       {props.results.map((result) => (
-        <div key={result.id}>
-          <h2>{result.original_title}</h2>
-        </div>
+        <Card key={result.key} result={result}/>
       ))}
     </div>
   );
